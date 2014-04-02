@@ -4,7 +4,7 @@
  * Last update: April 02, 2014
  *
  * @author Niko van Meurs
- * @version 0.1
+ * @version 1.0
  * @License MIT License (http://opensource.org/Licenses/MIT)
  */
 
