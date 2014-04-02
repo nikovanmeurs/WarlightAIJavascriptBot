@@ -4,12 +4,12 @@
  */
 Map = function () {
 
-	if (false === (this instanceof Map)) {
-		return new Map(arguments);
-	}
+    if (false === (this instanceof Map)) {
+        return new Map(arguments);
+    }
 
-	this.regions = {};
-	this.superRegions = {};
+    this.regions = {};
+    this.superRegions = {};
 };
 
 /**
@@ -20,11 +20,11 @@ Map = function () {
  */
 Map.prototype.getRegionById = function (id) {
 
-	if (this.regions.hasOwnProperty(id)) {
-		return this.regions[id];
-	}
+    if (this.regions.hasOwnProperty(id)) {
+        return this.regions[id];
+    }
 
-	return null;
+    return null;
 };
 
 /**
@@ -35,11 +35,11 @@ Map.prototype.getRegionById = function (id) {
  */
 Map.prototype.getSuperRegionById = function (id) {
 
-	if (this.superRegions.hasOwnProperty(id)) {
-		return this.superRegions[id];
-	}
+    if (this.superRegions.hasOwnProperty(id)) {
+        return this.superRegions[id];
+    }
 
-	return null;
+    return null;
 };
 
 /**
@@ -50,22 +50,22 @@ Map.prototype.getSuperRegionById = function (id) {
  */
 Map.prototype.getOwnedRegions = function (owner) {
 
-	var i,
-		region,
-		ownedRegions = [];
+    var i,
+        region,
+        ownedRegions = [];
 
-	for (i in this.regions) {
+    for (i in this.regions) {
 
-		if (this.regions.hasOwnProperty(i)) {
-			region = this.regions[i];
+        if (this.regions.hasOwnProperty(i)) {
+            region = this.regions[i];
 
-			if (region.owner === owner) {
-				ownedRegions.push(region);
-			}
-		}		
-	}
+            if (region.owner === owner) {
+                ownedRegions.push(region);
+            }
+        }       
+    }
 
-	return ownedRegions;
+    return ownedRegions;
 };
 
 

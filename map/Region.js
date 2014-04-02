@@ -8,17 +8,17 @@ require('./PossibleOwners.js');
  */
 Region = function (id, superRegion) {
 
-	if (false === ( this instanceof Region)) {
-		return new Region(arguments);
-	}
+    if (false === ( this instanceof Region)) {
+        return new Region(arguments);
+    }
 
-	this.id = id;
-	this.superRegion = superRegion;
-	this.owner = PossibleOwners.NEUTRAL;
-	this.neighbors = [];
-	this.troopCount = 2;
-	this.isOnEmpireBorder = false;
-	this.isOnSuperRegionBorder = false;
+    this.id = id;
+    this.superRegion = superRegion;
+    this.owner = PossibleOwners.NEUTRAL;
+    this.neighbors = [];
+    this.troopCount = 2;
+    this.isOnEmpireBorder = false;
+    this.isOnSuperRegionBorder = false;
 }
 
 module.exports = Region;
